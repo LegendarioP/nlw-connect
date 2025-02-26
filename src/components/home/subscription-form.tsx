@@ -1,10 +1,18 @@
+"use client"
 import { ArrowRight, Mail, User } from "lucide-react"
 import Button from "../button"
 import { InputField, InputIcon, InputRoot } from "../input"
 
 export default function SubscriptionForm() {
+  function onSubscribe(data: FormData) {
+    console.log(data)
+  }
+
   return (
-    <form className="bg-gray-700 border border-gray-600 rounded-2xl p-8 space-y-6 w-full md:max-w-[440px]">
+    <form
+      action={onSubscribe}
+      className="bg-gray-700 border border-gray-600 rounded-2xl p-8 space-y-6 w-full md:max-w-[440px]"
+    >
       <h2 className="font-heading font-semibold text-gray-200 text-xl">
         Inscrição
       </h2>

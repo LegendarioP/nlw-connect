@@ -5,6 +5,8 @@ import Image from "next/image"
 import logo from "../../assets/logo.svg"
 
 export default function invitePage() {
+  const inviteLink = "http://localhost:3000/invite/5642313876132564"
+
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
       <div className="flex flex-col gap-10 w-full max-w-[550px]">
@@ -31,7 +33,7 @@ export default function invitePage() {
               inscrições:
             </p>
 
-            <InviteLinkInput />
+            <InviteLinkInput inviteLink={inviteLink} />
 
             <Stats />
           </div>
