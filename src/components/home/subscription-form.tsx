@@ -1,16 +1,19 @@
 "use client"
 import { ArrowRight, Mail, User } from "lucide-react"
+import { useForm } from "react-hook-form"
 import Button from "../button"
 import { InputField, InputIcon, InputRoot } from "../input"
 
 export default function SubscriptionForm() {
-  function onSubscribe(data: FormData) {
+  function onSubscribe(data: any) {
     console.log(data)
   }
 
+  const { register, handleSubmit } = useForm()
+
   return (
     <form
-      action={onSubscribe}
+      onSubmit={handleSubmit(onSubscribe)}
       className="bg-gray-700 border border-gray-600 rounded-2xl p-8 space-y-6 w-full md:max-w-[440px]"
     >
       <h2 className="font-heading font-semibold text-gray-200 text-xl">
@@ -22,14 +25,18 @@ export default function SubscriptionForm() {
           <InputIcon>
             <User />
           </InputIcon>
-          <InputField type="text" placeholder="Nome Completo" />
+          <InputField
+            type="text"
+            placeholder="Nome Completo"
+            {...register("name")}
+          />
         </InputRoot>
 
         <InputRoot>
           <InputIcon>
             <Mail />
           </InputIcon>
-          <InputField type="text" placeholder="E-mail" />
+          <InputField type="text" placeholder="E-mail" {...register("email")} />
         </InputRoot>
       </div>
 
