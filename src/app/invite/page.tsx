@@ -23,7 +23,6 @@ export default function invitePage() {
         <div className="space-y-6">
           <div className="space-y-3">
             <h2 className="text-gray-200 text-xl font-heading font-semibold leading-none">
-              {" "}
               Indique e Ganhe
             </h2>
             <p className="text-gray-300">
