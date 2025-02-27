@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch --env-file .env src/server.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "build": "tsup-node",
+    "start": "node dist/server.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/cors": "10.0.2",
+    "@fastify/jwt": "9.0.3",
+    "@fastify/swagger": "9.4.2",
+    "@fastify/swagger-ui": "5.2.1",
+    "drizzle-orm": "0.39.1",
+    "fastify": "5.2.1",
+    "fastify-type-provider-zod": "4.0.2",
+    "ioredis": "5.4.2",
+    "postgres": "3.4.5",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "22.13.0",
+    "drizzle-kit": "0.30.4",
+    "tsup": "8.3.6",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
+  }
+}

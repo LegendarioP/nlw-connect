@@ -1,0 +1,26 @@
+@host = localhost:3333
+
+### Subscribe to event
+POST http://{{host}}/subscriptions
+Content-Type: application/json
+
+{
+  "name": "Invited",
+  "email": "invited@rocketseat.team",
+  "referrer": "3cc72c15-34b5-4933-b6bf-854ac97dd60d"
+}
+
+### Access invite link
+GET http://{{host}}/invites/4b7b21d9-2b3a-4146-89a0-60467275ae6a
+
+### Get subscriber invites clicks
+GET http://{{host}}/subscribers/3cc72c15-34b5-4933-b6bf-854ac97dd60d/ranking/clicks
+
+### Get subscriber invites count
+GET http://{{host}}/subscribers/3cc72c15-34b5-4933-b6bf-854ac97dd60d/ranking/count
+
+### Get subscriber ranking position
+GET http://{{host}}/subscribers/3cc72c15-34b5-4933-b6bf-854ac97dd60d/ranking/position
+
+### Get ranking
+GET http://{{host}}/ranking
