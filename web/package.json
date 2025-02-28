@@ -26,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "orval": "^7.6.0",
     "typescript": "^5"
   }
 }
