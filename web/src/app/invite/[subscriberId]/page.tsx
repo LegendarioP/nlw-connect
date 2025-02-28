@@ -2,7 +2,7 @@ import InviteLinkInput from "@/components/invite/invite-link-input"
 import Ranking from "@/components/invite/ranking"
 import Stats from "@/components/invite/stats"
 import Image from "next/image"
-import logo from "../../assets/logo.svg"
+import logo from "../../../assets/logo.svg"
 
 export default function invitePage() {
   const inviteLink = "http://localhost:3000/invite/5642313876132564"
