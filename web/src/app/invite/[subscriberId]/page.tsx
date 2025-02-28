@@ -13,7 +13,7 @@ interface InvitePageProps {
 export default async function invitePage(props: InvitePageProps) {
   const { subscriberId } = await props.params
 
-  const inviteLink = `http://localhost:3000/invite/${subscriberId}`
+  const inviteLink = `http://localhost:3333/invites/${subscriberId}`
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
