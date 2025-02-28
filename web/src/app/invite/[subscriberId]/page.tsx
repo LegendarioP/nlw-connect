@@ -4,8 +4,16 @@ import Stats from "@/components/invite/stats"
 import Image from "next/image"
 import logo from "../../../assets/logo.svg"
 
-export default function invitePage() {
-  const inviteLink = "http://localhost:3000/invite/5642313876132564"
+interface InvitePageProps {
+  params: Promise<{
+    subscriberId: string
+  }>
+}
+
+export default async function invitePage(props: InvitePageProps) {
+  const { subscriberId } = await props.params
+
+  const inviteLink = `http://localhost:3000/invite/${subscriberId}`
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
