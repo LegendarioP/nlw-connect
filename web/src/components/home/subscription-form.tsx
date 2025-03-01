@@ -30,7 +30,7 @@ export default function SubscriptionForm() {
 
   async function onSubscribe({ name, email }: SubscriptionSchema) {
     const referrer = searchParams.get("referrer")
-    const { subscriberId } = await subscribeToEvent({ name, email })
+    const { subscriberId } = await subscribeToEvent({ name, email, referrer })
 
     router.push(`/invite/${subscriberId}`)
   }
